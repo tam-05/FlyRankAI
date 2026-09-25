@@ -3,47 +3,61 @@
 AI-powered search engine ranking, SERP analysis, and Google AI Overview visibility tracking platform.
 
 ## Overview
-This repository contains the ongoing engineering work for FlyRankAI.
+This repository contains the ongoing engineering work for FlyRankAI across curriculum milestones.
 
 - **[CLAUDE.md](file:///c:/Users/taman/Documents/FlyRankAI/CLAUDE.md)**: Engineering instructions, conventions, and testable project-specific rules learned through directed AI verification loops.
-- **[WORKFLOW.md](file:///c:/Users/taman/Documents/FlyRankAI/WORKFLOW.md)**: Comprehensive evaluation comparing single-shot unconstrained prompting (Round 1) vs. spec-driven engineering with verification (Round 2).
+- **[WORKFLOW.md](file:///c:/Users/taman/Documents/FlyRankAI/WORKFLOW.md)**: Week 2 evaluation comparing single-shot unconstrained prompting (Round 1) vs. spec-driven engineering with verification (Round 2).
+- **[week-3/SUBMISSION.md](file:///c:/Users/taman/Documents/FlyRankAI/week-3/SUBMISSION.md)**: Week 3 Capstone Application Master Submission report.
 
 ## Project Structure
 ```text
 FlyRankAI/
-├── CLAUDE.md              # Project rules and engineering guidelines
-├── WORKFLOW.md            # AI prompt engineering drill report (300-500 words)
-├── week-1/                # Week 1 foundations & initial repo setup
-└── week-2/                # Week 2 settings form drill (Round 1 & Round 2)
+├── CLAUDE.md                  # Project rules and engineering guidelines
+├── WORKFLOW.md                # Week 2 AI prompt engineering drill report
+├── week-1/                    # Week 1 foundations & initial repo setup
+├── week-2/                    # Week 2 settings form drill (Round 1 & Round 2)
+└── week-3/                    # Week 3 core React application & AI partnership
     ├── src/
-    │   ├── round-1/       # Round 1: Vague prompt implementation
-    │   ├── round-2/       # Round 2: Spec-driven implementation with WCAG 2.1 AA a11y
-    │   ├── tests/         # Vitest + React Testing Library verification suite
-    │   ├── App.jsx        # Interactive dual-view & comparison matrix
+    │   ├── components/        # Header, MetricCards, KeywordTable, AddKeywordModal, InspectorDrawer
+    │   ├── data/              # Seed keywords and AI Overview telemetry
+    │   ├── hooks/             # useKeywordTracker custom state & CSV export hook
+    │   ├── utils/             # Validators adhering to CLAUDE.md rules
+    │   ├── tests/             # Vitest + React Testing Library verification suite (19 tests)
+    │   ├── App.jsx            # Core dashboard layout
     │   └── main.jsx
+    ├── SUBMISSION.md          # Master submission document
+    ├── PROMPTS.md             # Complete prompt engineering logs
+    ├── AI_ASSISTANCE.md       # Explanation of AI collaboration
+    ├── MANUAL_IMPROVEMENTS.md # Detailed code review fixes & diffs
     ├── package.json
-    ├── vite.config.js
-    └── WORKFLOW.md
+    └── vite.config.js
 ```
 
-## Running the Application
-To run the interactive settings form comparison in `week-2`:
+## Running the Applications
 
+### Week 3: SERP & AI Visibility Dashboard
+```bash
+cd week-3
+npm install
+npm run dev
+```
+Open `http://localhost:5173` to test:
+- Live keyword search, multi-criteria intent & AI Overview filters.
+- Real-time KPI metrics calculation.
+- 7-day SERP Trajectory SVG charts in the Keyword Inspector Drawer.
+- Adding new keywords with full WCAG 2.1 AA validation.
+- One-click CSV audit export.
+
+To run the Week 3 test suite:
+```bash
+cd week-3
+npm test
+```
+
+### Week 2: Settings Form Comparison Drill
 ```bash
 cd week-2
 npm install
 npm run dev
-```
-
-Open `http://localhost:5173` in your browser. Use the top navigation bar to toggle between:
-- **Round 1 (Vague)**: The unconstrained prompt implementation with subtle validation and accessibility flaws.
-- **Round 2 (Spec + Verified)**: The production-grade implementation with strict sanitization, focus trapping, and ARIA announcements.
-- **Comparison Matrix**: Detailed side-by-side breakdown across correctness, a11y, edge cases, and review time.
-
-## Running Tests
-To run the automated verification suite:
-
-```bash
-cd week-2
 npm test
 ```
