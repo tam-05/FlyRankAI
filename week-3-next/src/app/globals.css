@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === CSS Custom Properties / Design Tokens === */
+:root {
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Brand glow effects */
+  --glow-brand: 0 0 20px rgba(56, 189, 248, 0.25);
+  --glow-success: 0 0 15px rgba(16, 185, 129, 0.25);
+}
+
+/* === Base layer overrides === */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface-900 text-slate-100;
+  }
+
+  /* Accessible focus ring */
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-400 ring-offset-2 ring-offset-surface-800;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+/* === Component layer === */
+@layer components {
+  /* Skip-to-content link for accessibility */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-4 focus:left-4
+           bg-brand-500 text-white px-4 py-2 rounded-lg font-semibold text-sm;
+  }
+
+  /* Sidebar navigation link states */
+  .nav-link {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium
+           text-slate-400 hover:text-slate-100 hover:bg-surface-700
+           transition-all duration-150;
+  }
+
+  .nav-link.active {
+    @apply text-brand-400 bg-brand-500/10 border border-brand-500/20;
+  }
+
+  /* Metric / stat cards */
+  .metric-card {
+    @apply bg-surface-800 border border-surface-700 rounded-2xl p-5
+           hover:border-surface-600 hover:-translate-y-0.5
+           transition-all duration-150 shadow-sm;
+  }
+
+  /* Standard page card */
+  .page-card {
+    @apply bg-surface-800 border border-surface-700 rounded-2xl p-6;
+  }
+
+  /* Badge variants */
+  .badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full
+           text-2xs font-bold tracking-wide uppercase;
+  }
+
+  .badge-success { @apply badge bg-emerald-500/15 text-emerald-400 border border-emerald-500/20; }
+  .badge-warning { @apply badge bg-amber-500/15 text-amber-400 border border-amber-500/20; }
+  .badge-danger  { @apply badge bg-red-500/15 text-red-400 border border-red-500/20; }
+  .badge-info    { @apply badge bg-brand-500/15 text-brand-400 border border-brand-500/20; }
+  .badge-muted   { @apply badge bg-surface-600/50 text-slate-400 border border-surface-600; }
+
+  /* Button variants */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-4 py-2.5 rounded-xl
+           bg-gradient-to-r from-brand-600 to-brand-500 text-white
+           text-sm font-semibold shadow-glow-brand
+           hover:brightness-110 hover:-translate-y-0.5
+           active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed
+           transition-all duration-150;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-4 py-2.5 rounded-xl
+           bg-surface-700 text-slate-200 border border-surface-600
+           text-sm font-semibold
+           hover:bg-surface-600 hover:text-white
+           active:bg-surface-700 disabled:opacity-50 disabled:cursor-not-allowed
+           transition-all duration-150;
+  }
+
+  /* Placeholder shimmer for skeleton loading */
+  .skeleton {
+    @apply bg-surface-700 rounded-lg animate-pulse;
+  }
+
+  /* Scrollbar */
+  .thin-scrollbar::-webkit-scrollbar { width: 4px; height: 4px; }
+  .thin-scrollbar::-webkit-scrollbar-track { @apply bg-surface-800; }
+  .thin-scrollbar::-webkit-scrollbar-thumb { @apply bg-surface-600 rounded-full; }
+}

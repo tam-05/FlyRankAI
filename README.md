@@ -16,21 +16,40 @@ FlyRankAI/
 ├── WORKFLOW.md                # Week 2 AI prompt engineering drill report
 ├── week-1/                    # Week 1 foundations & initial repo setup
 ├── week-2/                    # Week 2 settings form drill (Round 1 & Round 2)
-└── week-3/                    # Week 3 core React application & AI partnership
+├── week-3/                    # Week 3 core React application & AI partnership
+│   ├── src/
+│   │   ├── components/        # Header, MetricCards, KeywordTable, AddKeywordModal, InspectorDrawer
+│   │   ├── data/              # Seed keywords and AI Overview telemetry
+│   │   ├── hooks/             # useKeywordTracker custom state & CSV export hook
+│   │   ├── utils/             # Validators adhering to CLAUDE.md rules
+│   │   ├── tests/             # Vitest + React Testing Library verification suite (19 tests)
+│   │   ├── App.jsx            # Core dashboard layout
+│   │   └── main.jsx
+│   ├── SUBMISSION.md          # Master submission document
+│   ├── PROMPTS.md             # Complete prompt engineering logs
+│   ├── AI_ASSISTANCE.md       # Explanation of AI collaboration
+│   ├── MANUAL_IMPROVEMENTS.md # Detailed code review fixes & diffs
+│   ├── package.json
+│   └── vite.config.js
+└── week-3-next/               # Week 3 Phase 3: Next.js + Tailwind app (Vercel deploy)
     ├── src/
-    │   ├── components/        # Header, MetricCards, KeywordTable, AddKeywordModal, InspectorDrawer
-    │   ├── data/              # Seed keywords and AI Overview telemetry
-    │   ├── hooks/             # useKeywordTracker custom state & CSV export hook
-    │   ├── utils/             # Validators adhering to CLAUDE.md rules
-    │   ├── tests/             # Vitest + React Testing Library verification suite (19 tests)
-    │   ├── App.jsx            # Core dashboard layout
-    │   └── main.jsx
-    ├── SUBMISSION.md          # Master submission document
-    ├── PROMPTS.md             # Complete prompt engineering logs
-    ├── AI_ASSISTANCE.md       # Explanation of AI collaboration
-    ├── MANUAL_IMPROVEMENTS.md # Detailed code review fixes & diffs
-    ├── package.json
-    └── vite.config.js
+    │   ├── app/               # App Router pages (Server Components by default)
+    │   │   ├── page.jsx       # Dashboard overview
+    │   │   ├── keywords/      # Keyword tracking placeholder
+    │   │   ├── ai-overviews/  # AI Overview intelligence placeholder
+    │   │   ├── competitors/   # Competitor benchmarking placeholder
+    │   │   ├── reports/       # Reports & exports placeholder
+    │   │   ├── alerts/        # Alert rules placeholder
+    │   │   ├── settings/      # Project settings placeholder
+    │   │   └── health/        # Health check (live fetched data)
+    │   └── components/
+    │       ├── layout/        # Sidebar, TopBar (Client Components)
+    │       ├── dashboard/     # MetricCardGrid, RankMomentumTable
+    │       └── ui/            # PageHeader, PlaceholderSection, SkeletonGrid
+    ├── tailwind.config.js     # FlyRankAI design tokens
+    ├── .env.example           # Env var template (no secrets)
+    ├── next.config.js
+    └── package.json
 ```
 
 ## Running the Applications
@@ -52,6 +71,23 @@ To run the Week 3 test suite:
 ```bash
 cd week-3
 npm test
+```
+
+### Week 3 Phase 3: Next.js + Tailwind (Vercel Deploy)
+```bash
+cd week-3-next
+npm install
+npm run dev
+```
+Open `http://localhost:3000` to view:
+- 8 fully-routed pages (Dashboard, Keywords, AI Overviews, Competitors, Reports, Alerts, Settings, Health Check).
+- Responsive layout at 375px and 1280px with collapsible sidebar.
+- Health Check page fetches live data server-side from JSONPlaceholder API.
+- FlyRankAI design tokens in Tailwind config (brand sky-blue palette, dark navy surfaces, glow effects).
+
+Production build:
+```bash
+npm run build    # 0 errors, 11/11 pages generated
 ```
 
 ### Week 2: Settings Form Comparison Drill
