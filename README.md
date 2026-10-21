@@ -31,25 +31,40 @@ FlyRankAI/
 │   ├── MANUAL_IMPROVEMENTS.md # Detailed code review fixes & diffs
 │   ├── package.json
 │   └── vite.config.js
-└── week-3-next/               # Week 3 Phase 3: Next.js + Tailwind app (Vercel deploy)
+├── week-3-next/               # Week 3 Phase 3: Next.js + Tailwind app (Vercel deploy)
+│   ├── src/
+│   │   ├── app/               # App Router pages (Server Components by default)
+│   │   │   ├── page.jsx       # Dashboard overview
+│   │   │   ├── keywords/      # Keyword tracking placeholder
+│   │   │   ├── ai-overviews/  # AI Overview intelligence placeholder
+│   │   │   ├── competitors/   # Competitor benchmarking placeholder
+│   │   │   ├── reports/       # Reports & exports placeholder
+│   │   │   ├── alerts/        # Alert rules placeholder
+│   │   │   ├── settings/      # Project settings placeholder
+│   │   │   └── health/        # Health check (live fetched data)
+│   │   └── components/
+│   │       ├── layout/        # Sidebar, TopBar (Client Components)
+│   │       ├── dashboard/     # MetricCardGrid, RankMomentumTable
+│   │       └── ui/            # PageHeader, PlaceholderSection, SkeletonGrid
+│   ├── tailwind.config.js     # FlyRankAI design tokens
+│   ├── .env.example           # Env var template (no secrets)
+│   ├── next.config.js
+│   └── package.json
+└── week-4/                    # Week 4: Accessible Component Playground (FE-03)
+    ├── playground/            # Three scratch W3C ARIA components (React + TypeScript)
+    │   ├── Modal.tsx          # Dialog modal with focus trapping & return focus
+    │   ├── Tabs.tsx           # Tabs with roving tabindex & arrow navigation
+    │   ├── Disclosure.tsx     # Show/hide disclosure region with aria-expanded
+    │   └── index.ts
     ├── src/
-    │   ├── app/               # App Router pages (Server Components by default)
-    │   │   ├── page.jsx       # Dashboard overview
-    │   │   ├── keywords/      # Keyword tracking placeholder
-    │   │   ├── ai-overviews/  # AI Overview intelligence placeholder
-    │   │   ├── competitors/   # Competitor benchmarking placeholder
-    │   │   ├── reports/       # Reports & exports placeholder
-    │   │   ├── alerts/        # Alert rules placeholder
-    │   │   ├── settings/      # Project settings placeholder
-    │   │   └── health/        # Health check (live fetched data)
-    │   └── components/
-    │       ├── layout/        # Sidebar, TopBar (Client Components)
-    │       ├── dashboard/     # MetricCardGrid, RankMomentumTable
-    │       └── ui/            # PageHeader, PlaceholderSection, SkeletonGrid
-    ├── tailwind.config.js     # FlyRankAI design tokens
-    ├── .env.example           # Env var template (no secrets)
-    ├── next.config.js
-    └── package.json
+    │   ├── components/ui/     # Canonical shadcn/ui components (dialog.tsx, tabs.tsx)
+    │   ├── playground/        # Component sources
+    │   ├── App.tsx            # Interactive comparison showcase
+    │   └── main.tsx
+    ├── NOTES.md               # Deep gap analysis (scratch vs. shadcn / Radix primitives)
+    ├── package.json
+    ├── tsconfig.json
+    └── vite.config.ts
 ```
 
 ## Running the Applications
@@ -88,6 +103,30 @@ Open `http://localhost:3000` to view:
 Production build:
 ```bash
 npm run build    # 0 errors, 11/11 pages generated
+```
+
+### Week 4: Accessible Component Playground (FE-03)
+```bash
+cd week-4
+npm install
+npm run dev
+```
+Open `http://localhost:5173` to test:
+- **Modal Dialog**: Focus trapping (`Tab` / `Shift+Tab`), Escape key listener, focus return to triggering element on close, body scroll locking, and zero `any` types.
+- **Tabs**: Roving `tabIndex` (only active tab is focusable with Tab), Left/Right arrow keys with cyclic wrapping, Home/End keys, automatic/manual activation.
+- **Disclosure**: Native `<button>` trigger with `aria-expanded` and `aria-controls` referencing `role="region"` content.
+- **Side-by-side shadcn/ui comparison**: Compare scratch implementations with canonical `@radix-ui/react-dialog` and `@radix-ui/react-tabs`.
+- Read **[week-4/NOTES.md](file:///c:/Users/taman/Documents/FlyRankAI/week-4/NOTES.md)** for detailed gap analysis covering:
+  1. Accessibility tree isolation (`aria-hidden` subtree inversion)
+  2. Pointer interaction lifecycles (`DismissableLayer` pointerdown vs pointerup)
+  3. Mobile Safari scroll lock & scrollbar layout shifts (`react-remove-scroll`)
+  4. Bidirectional (RTL) keyboard navigation in roving tabindex (`RovingFocusGroup`)
+  5. Focus restoration edge cases when trigger elements detach (`onCloseAutoFocus`)
+
+Type check & production build:
+```bash
+npx tsc -b       # 0 errors, strict TypeScript, zero 'any' types
+npm run build    # Production bundle verification
 ```
 
 ### Week 2: Settings Form Comparison Drill
