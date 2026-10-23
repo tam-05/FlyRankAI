@@ -42,3 +42,11 @@
   3. Boundary condition violations (e.g. 0, negatives, values exceeding maximum).
   4. Real-time error dismissal when input is corrected.
   5. Correct presence of ARIA attributes (`aria-invalid`, `aria-describedby`).
+
+### 4. Continuous Portfolio Platform & Case Study Conventions (Capstone 2)
+- **Three-Beat Narrative Arc**: All case studies follow the 3-Beat structure:
+  1. *Beat 1 (Problem)*: Specific user/engineering pain point, constraints, why naive approaches fail.
+  2. *Beat 2 (What was done)*: Technical architecture, prompt engineering loop, concrete code diffs, accessibility checks.
+  3. *Beat 3 (What came of it)*: Quantifiable outcomes, bugs caught in review, test pass rates, production lessons.
+- **Next Planned Increment**: Live SERP Telemetry & Google Gemini AI Overview Crawler via Serverless Webhooks.
+- **Cadence & Habit**: Monthly review on 4th Friday at 10:00 AM IST (reminder in `capstone-2/reminder.ics`).

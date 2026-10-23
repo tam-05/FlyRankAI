@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//FlyRankAI//Portfolio Case Study Reminder//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:FlyRankAI Portfolio Updates
+X-WR-TIMEZONE:Asia/Kolkata
+BEGIN:VEVENT
+UID:flyrankai-case-study-reminder-2026@flyrank.ai
+DTSTAMP:20261023T113000Z
+DTSTART:20261127T043000Z
+DTEND:20261127T053000Z
+RRULE:FREQ=MONTHLY;BYDAY=4FR;INTERVAL=1
+SUMMARY:[Portfolio Habit] Ship Next FlyRankAI Case Study (Live SERP Webhooks)
+DESCRIPTION:Time for the monthly portfolio update! Review the 3-beat case study format in capstone-2/HOW_TO_ADD_NEXT_CASE.md.\n\nNext piece: Live SERP Telemetry & Google Gemini AI Overview Crawler.\nOpen your Claude Project and run the prompt template.
+LOCATION:c:\\Users\\taman\\Documents\\FlyRankAI
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Time to document and ship the next FlyRankAI case study!
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Monthly portfolio case study review.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

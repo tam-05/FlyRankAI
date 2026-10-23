@@ -6,6 +6,8 @@ AI-powered search engine ranking, SERP analysis, and Google AI Overview visibili
 This repository contains the ongoing engineering work for FlyRankAI across curriculum milestones.
 
 - **[CLAUDE.md](file:///c:/Users/taman/Documents/FlyRankAI/CLAUDE.md)**: Engineering instructions, conventions, and testable project-specific rules learned through directed AI verification loops.
+- **[capstone-2/SUBMISSION.md](file:///c:/Users/taman/Documents/FlyRankAI/capstone-2/SUBMISSION.md)**: Capstone 2 (Continuous Portfolio Platform) submission & next case study system.
+- **[capstone-2/HOW_TO_ADD_NEXT_CASE.md](file:///c:/Users/taman/Documents/FlyRankAI/capstone-2/HOW_TO_ADD_NEXT_CASE.md)**: Three-beat case study guide, named next work, and calendar reminder evidence.
 - **[capstone/PORTFOLIO_ENTRY.md](file:///c:/Users/taman/Documents/FlyRankAI/capstone/PORTFOLIO_ENTRY.md)**: Master Production Capstone Portfolio Entry (7-part comprehensive evaluation).
 - **[capstone/DEPLOYMENT_CHECKLIST.md](file:///c:/Users/taman/Documents/FlyRankAI/capstone/DEPLOYMENT_CHECKLIST.md)**: FE-11 Production deployment sign-off & rollback plan.
 - **[WORKFLOW.md](file:///c:/Users/taman/Documents/FlyRankAI/WORKFLOW.md)**: Week 2 evaluation comparing single-shot unconstrained prompting (Round 1) vs. spec-driven engineering with verification (Round 2).
@@ -28,6 +30,10 @@ FlyRankAI/
 │   ├── DEPLOYMENT_CHECKLIST.md# FE-11 production sign-off and rollback runbook
 │   ├── package.json
 │   └── vite.config.js
+├── capstone-2/                # ★ CAPSTONE 2: CONTINUOUS PORTFOLIO PLATFORM ★
+│   ├── HOW_TO_ADD_NEXT_CASE.md# 3-beat guide, named next work, workflow (<15m)
+│   ├── SUBMISSION.md          # Complete structured Capstone 2 submission
+│   └── reminder.ics           # RFC 5545 calendar reminder file (recurring 4th Friday)
 ├── week-1/                    # Week 1 foundations & initial repo setup
 ├── week-2/                    # Week 2 settings form drill (Round 1 & Round 2)
 ├── week-3/                    # Week 3 core React application & AI partnership
