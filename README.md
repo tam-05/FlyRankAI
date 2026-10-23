@@ -6,7 +6,10 @@ AI-powered search engine ranking, SERP analysis, and Google AI Overview visibili
 This repository contains the ongoing engineering work for FlyRankAI across curriculum milestones.
 
 - **[CLAUDE.md](file:///c:/Users/taman/Documents/FlyRankAI/CLAUDE.md)**: Engineering instructions, conventions, and testable project-specific rules learned through directed AI verification loops.
+- **[capstone/PORTFOLIO_ENTRY.md](file:///c:/Users/taman/Documents/FlyRankAI/capstone/PORTFOLIO_ENTRY.md)**: Master Production Capstone Portfolio Entry (7-part comprehensive evaluation).
+- **[capstone/DEPLOYMENT_CHECKLIST.md](file:///c:/Users/taman/Documents/FlyRankAI/capstone/DEPLOYMENT_CHECKLIST.md)**: FE-11 Production deployment sign-off & rollback plan.
 - **[WORKFLOW.md](file:///c:/Users/taman/Documents/FlyRankAI/WORKFLOW.md)**: Week 2 evaluation comparing single-shot unconstrained prompting (Round 1) vs. spec-driven engineering with verification (Round 2).
+- **[week-4/NOTES.md](file:///c:/Users/taman/Documents/FlyRankAI/week-4/NOTES.md)**: Week 4 ARIA gap analysis (custom scratch components vs. Radix/shadcn).
 - **[week-3/SUBMISSION.md](file:///c:/Users/taman/Documents/FlyRankAI/week-3/SUBMISSION.md)**: Week 3 Capstone Application Master Submission report.
 
 ## Project Structure
@@ -14,6 +17,17 @@ This repository contains the ongoing engineering work for FlyRankAI across curri
 FlyRankAI/
 ├── CLAUDE.md                  # Project rules and engineering guidelines
 ├── WORKFLOW.md                # Week 2 AI prompt engineering drill report
+├── capstone/                  # ★ PRODUCTION CAPSTONE APPLICATION ★
+│   ├── src/
+│   │   ├── components/        # Header, GeoAuditSection, KeywordPortfolio, Drawer, Modals
+│   │   ├── services/          # aiService.js (Claude 3.5 API + Resilient Heuristic Fallback)
+│   │   ├── hooks/             # usePortfolio.js (state, filtering, sorting, localStorage)
+│   │   ├── test/              # Vitest test suite (12 passed tests)
+│   │   └── App.jsx            # Master layout with WCAG 2.1 AA accessibility & A11y toggle
+│   ├── PORTFOLIO_ENTRY.md     # Complete 7-part capstone submission document
+│   ├── DEPLOYMENT_CHECKLIST.md# FE-11 production sign-off and rollback runbook
+│   ├── package.json
+│   └── vite.config.js
 ├── week-1/                    # Week 1 foundations & initial repo setup
 ├── week-2/                    # Week 2 settings form drill (Round 1 & Round 2)
 ├── week-3/                    # Week 3 core React application & AI partnership
@@ -68,6 +82,25 @@ FlyRankAI/
 ```
 
 ## Running the Applications
+
+### ★ Production Capstone: FlyRankAI (FE-12)
+```bash
+cd capstone
+npm install
+npm run dev
+```
+Open `http://localhost:5173` to test:
+- **AI Citability & GEO Content Audit**: Live query and content audit powered by Claude 3.5 (or resilient offline heuristic fallback).
+- **SERP Portfolio Tracking**: Multi-criteria search, filtering (Intent, AI Overview Status), column sorting, and CSV export.
+- **Telemetry Inspector**: 7-day SERP Trajectory SVG polyline charts and captured AI overview answer snippets.
+- **Accessibility (WCAG 2.1 AA)**: Roving tabindex navigation, focus-trapped dialogs, Escape listeners, high-contrast mode toggle, and ARIA live regions.
+- **System Diagnostics**: Telemetry latency ping, deployment tier status, and rollback protocols.
+
+Run the test suite:
+```bash
+npm test         # 12 / 12 unit & integration tests passing (100%)
+npm run build    # Optimized production build (< 70 kB gzip JS)
+```
 
 ### Week 3: SERP & AI Visibility Dashboard
 ```bash
