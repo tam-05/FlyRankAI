@@ -57,6 +57,8 @@ capstone/
 │   └── main.jsx                       # React DOM root with ErrorBoundary
 ├── DEPLOYMENT_CHECKLIST.md            # FE-11 Production deployment sign-off & rollback plan
 ├── PORTFOLIO_ENTRY.md                 # Master capstone submission report
+├── TESTING_PERFORMANCE.md             # Testing evidence (beyond happy path) & Lighthouse/A11y audit
+├── REFLECTION.md                      # Engineering reflection: Hardest challenges & lessons learned
 ├── index.html
 ├── package.json
 ├── tailwind.config.js

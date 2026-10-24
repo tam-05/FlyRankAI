@@ -9,6 +9,8 @@ This repository contains the ongoing engineering work for FlyRankAI across curri
 - **[capstone-2/SUBMISSION.md](file:///c:/Users/taman/Documents/FlyRankAI/capstone-2/SUBMISSION.md)**: Capstone 2 (Continuous Portfolio Platform) submission & next case study system.
 - **[capstone-2/HOW_TO_ADD_NEXT_CASE.md](file:///c:/Users/taman/Documents/FlyRankAI/capstone-2/HOW_TO_ADD_NEXT_CASE.md)**: Three-beat case study guide, named next work, and calendar reminder evidence.
 - **[capstone/PORTFOLIO_ENTRY.md](file:///c:/Users/taman/Documents/FlyRankAI/capstone/PORTFOLIO_ENTRY.md)**: Master Production Capstone Portfolio Entry (7-part comprehensive evaluation).
+- **[capstone/TESTING_PERFORMANCE.md](file:///c:/Users/taman/Documents/FlyRankAI/capstone/TESTING_PERFORMANCE.md)**: Dedicated Testing & Performance Audit (beyond the happy path, Lighthouse 96+, axe-core passes, concrete fixes).
+- **[capstone/REFLECTION.md](file:///c:/Users/taman/Documents/FlyRankAI/capstone/REFLECTION.md)**: Dedicated Engineering Reflection (separating ego from learning: hardest parts, next time, surprising lessons).
 - **[capstone/DEPLOYMENT_CHECKLIST.md](file:///c:/Users/taman/Documents/FlyRankAI/capstone/DEPLOYMENT_CHECKLIST.md)**: FE-11 Production deployment sign-off & rollback plan.
 - **[WORKFLOW.md](file:///c:/Users/taman/Documents/FlyRankAI/WORKFLOW.md)**: Week 2 evaluation comparing single-shot unconstrained prompting (Round 1) vs. spec-driven engineering with verification (Round 2).
 - **[week-4/NOTES.md](file:///c:/Users/taman/Documents/FlyRankAI/week-4/NOTES.md)**: Week 4 ARIA gap analysis (custom scratch components vs. Radix/shadcn).
@@ -28,6 +30,8 @@ FlyRankAI/
 │   │   └── App.jsx            # Master layout with WCAG 2.1 AA accessibility & A11y toggle
 │   ├── PORTFOLIO_ENTRY.md     # Complete 7-part capstone submission document
 │   ├── DEPLOYMENT_CHECKLIST.md# FE-11 production sign-off and rollback runbook
+│   ├── TESTING_PERFORMANCE.md # Dedicated testing evidence & Lighthouse/WAVE audit
+│   ├── REFLECTION.md          # Dedicated engineering reflection (1 page)
 │   ├── package.json
 │   └── vite.config.js
 ├── capstone-2/                # ★ CAPSTONE 2: CONTINUOUS PORTFOLIO PLATFORM ★
